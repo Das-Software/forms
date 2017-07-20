@@ -13,7 +13,6 @@ before_script:
 script:
   - ng build --prod
   - ng test --watch false
-  - ng e2e
 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
