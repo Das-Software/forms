@@ -29,10 +29,11 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome', 'ChromeCanary'],
     customLaunchers: {
-    Chrome_travis_ci: {
-        base: ‘Chrome’,
-        flags: [‘ — no-sandbox’]
-    }
+      Chrome_travis_ci: {
+          base: ‘Chrome’,
+          flags: [‘ — no-sandbox’]
+      }
+   },
  },
     singleRun: false
   }
