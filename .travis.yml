@@ -23,4 +23,4 @@ script:
   - ng test --watch false
 
 after_success:
-  - firebase deploy --token $FIREBASE_TOKEN --non-interactive
+  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then firebase deploy --token $FIREBASE_TOKEN --non-interactive; fi
